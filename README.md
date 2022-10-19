@@ -4,14 +4,14 @@
 
 Name: Julio Gracida  
 Email: Jcgdc2@umsystem.edu  
-Assignment 1  
+Assignment 2 Question 1  
 Anchor 303
 
 ---
 **How to Run the Code**
 
 This code was written using replit.com  
-You can copy and paste the URL below to run it on your web browser  
+You can copy and paste the URL below to run it in your web browser  
 https://replit.com/@SimplyJuly/Assignment1#main.cpp  
 
 You can also download the files to run it in your preferred IDE. 
@@ -22,17 +22,24 @@ functions.h (header file with function declarations)
 fuctions.cpp (function definitons)
 
 ---
-**Screenshots**  
-Below are screenshots of each core function being ran
 
-Searching for an integer (found and not found)  
+#### **Requirements: Take Assigment 1 and add try-catches to two functions**
+**Function: Modify an integer with given index**  
+Code located in:   
+  File: functions.cpp  
+  Lines: 47 - 70  
+  
+Screenshots of try catches in action:  
+Improper Index is provided:  
+
+Improper "New Integer" is provided:
 
 
-Modifying an integer  
+**Function: Add integer at end of the array**  
+Code Located in: 
+File: main.cpp  
+Lines: 54 - 65  
 
-
-Adding an integer at the end of an array  
-
-
-Removing an integer  
+Screenshots of try catch in action:
+Improper Integer is provided:
 

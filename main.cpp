@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdexcept>
+#include <limits>
 #include "functions.h"
 
 using namespace std;
@@ -15,6 +17,8 @@ int main(){
   char selection;
   int result;
 
+  cin.exceptions(ios_base::failbit);
+  
   readFile (array, "input.txt", size); //reads file and loads array
 
   //menu selection
@@ -47,7 +51,18 @@ int main(){
         break;
       case 'a': //dialoge and function to add an integer
         cout << "What integer would you like to add?: ";
-        cin >> integer;
+        while(true){  //try catch for getting an integer
+          try{ 
+            cin >> integer;
+            break;
+          }
+          catch (ios_base::failure& ex) {
+            cout << "That was not a number :(, Please try again. ";
+            //continue writing out the example in class
+            cin.clear();
+            cin.ignore(numeric_limits<int>::max(),'\n');
+          }
+        }
         addInteger(array, size, integer);
         cout << array[size] << " is now at the end of the array!" << endl;
         break;

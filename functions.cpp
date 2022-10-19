@@ -1,6 +1,8 @@
 #include "functions.h"
 #include <iostream>
 #include <fstream>
+#include <stdexcept>
+#include <limits>
 
 using namespace std;
 
@@ -40,10 +42,33 @@ void addInteger(int* array, int &size, int input){
 
 // REPLACES AN INTEGER WITH A NEW ONE
 void integerModifier(int* array, int &original_integer, int &new_integer){
+  cin.exceptions(ios_base::failbit);
   int index;
-  cin >> index; //takes index that we will change
+  while(true){  //try catch for getting the new index
+    try{ 
+      cin >> index; //takes index that we will change
+      break;
+    }
+    catch (ios_base::failure& ex) {
+      cout << "That was not a number :(, Please try again. ";
+      //continue writing out the example in class
+      cin.clear();
+      cin.ignore(numeric_limits<int>::max(),'\n');
+    }
+  }
   cout << endl << "What is the new number?: ";
-  cin >> new_integer; //takes the new integer
+  while(true){  //try catch for getting the new integer
+    try{ 
+      cin >> new_integer; //takes the new integer
+      break;
+    }
+    catch (ios_base::failure& ex) {
+      cout << "That was not a number :(, Please try again. ";
+      //continue writing out the example in class
+      cin.clear();
+      cin.ignore(numeric_limits<int>::max(),'\n');
+    }
+  }
   cout << endl;
   
   original_integer = array[index]; //saves what the orginal was
