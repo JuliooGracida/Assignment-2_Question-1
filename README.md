@@ -12,7 +12,7 @@ Anchor 303
 
 This code was written using replit.com  
 You can copy and paste the URL below to run it in your web browser  
-https://replit.com/@SimplyJuly/Assignment1#main.cpp  
+https://replit.com/@SimplyJuly/Assignment2#main.cpp
 
 You can also download the files to run it in your preferred IDE. 
 
